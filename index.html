@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Selection</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+select, button {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+
+#loading {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+#result {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+:root {
+    --bard-color-brand-text-gradient-stop-1: #FF5733; 
+    --bard-color-brand-text-gradient-stop-2: #C70039;
+    --bard-color-brand-text-gradient-stop-3: #900C3F;
+    --gem-sys-color--surface: #581845;
+}
+
+
+#result span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-image: linear-gradient(
+        to right,
+        var(--bard-color-brand-text-gradient-stop-1) 0%,
+        var(--bard-color-brand-text-gradient-stop-2) 9%,
+        var(--bard-color-brand-text-gradient-stop-3) 20%,
+        var(--bard-color-brand-text-gradient-stop-3) 24%,
+        var(--bard-color-brand-text-gradient-stop-2) 35%,
+        var(--bard-color-brand-text-gradient-stop-1) 44%,
+        var(--bard-color-brand-text-gradient-stop-2) 50%,
+        var(--bard-color-brand-text-gradient-stop-3) 56%,
+        var(--gem-sys-color--surface) 75%,
+        var(--gem-sys-color--surface) 100%
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    select, button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Select a Language</h1>
+      <select id="language">
+        <option value="">Choose a language</option>
+        <option value="English">English</option>
+        <option value="French">French</option>
+        <option value="Hindi">Hindi</option>
+      </select>
+
+      <button onclick="getHelloWorldMessage()">Get Greeting</button>
+
+      <div id="loading" style="display: none">Loading...</div>
+
+      <p id="result"></p>
+    </div>
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
