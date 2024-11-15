@@ -6,7 +6,7 @@
             document.getElementById('loading').style.display = 'none'; 
             return;
         }
-        fetch(`http://localhost:5000/hello?language=${language}`)
+        fetch(`https://language-selection-back.onrender.com/hello?language=${language}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Language not supported');
